@@ -58,7 +58,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('extras', function () {
-    return gulp.src(['app/*.*', '!app/*.html'], { dot: true })
+    return gulp.src(['app/*.*', '!app/*.html','CNAME'], { dot: true })
         .pipe(gulp.dest('dist'));
 });
 
@@ -85,6 +85,22 @@ gulp.task('connect', function () {
         .on('listening', function () {
             console.log('Started connect web server on http://localhost:9000');
         });
+});
+
+gulp.task('connect-dist', function() {
+  var connect = require('connect');
+  connect.server({
+    root: 'dist/',
+    port: '8123'
+  });
+});
+
+gulp.task("open-dist", ['connect-dist'], function(){
+  var options = {
+    url: "http://localhost:8123"
+  };
+  gulp.src("dist/index.html")
+    .pipe(require('opn')("", options));
 });
 
 gulp.task('serve', ['connect'], function () {
@@ -120,4 +136,11 @@ gulp.task('watch', ['connect', 'serve'], function () {
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep']);
+});
+
+gulp.task('deploy', function () {
+  gulp.src("./dist/**/*")
+    .pipe(require("gulp-gh-pages")({
+      remoteUrl: 'git@github.com:alsacedigitale/hhcamp.git'
+    }));
 });

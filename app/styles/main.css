@@ -6,52 +6,68 @@
 }
 
 body {
-    font-family: Roboto Condensed;
-    
+    font-family: Roboto Condensed;  
 }
 
 .menu {
     background-color: black;
+    height: 20px;
 }
 .menu a {
     color: white;
-    
 }
 .menu a:hover {
     text-decoration: none;
-    
     color: #c0323b;
 }
+
 .menu-left {
     font-size: 10pt;
-    
     padding: 0 10px;
     display: inline-block;
     background-color: #3b3b3a;
     color: white;
+    letter-spacing: 1px;
 }
+
 .social {
     display: inline-block;
-    
 }
 .social li {
     text-align: center;
-    
-    background-color: #3b3b3a;
-    border-radius: 50%;
     display: inline;
-    /* width: 31px; */
-    margin: 0 14x;
-    padding: 0 5px;
 }
+.social li div {
+    border-radius: 50%;
+    background-color: #3b3b3a;
+    display: inline-block;
+}
+.social li,a,span {
+    width: 20px;
+}
+
 .language {
+    display: inline-block;
     
+    float: right;
+    background-color: #c0323b;
+    color: white;
+    padding: 3px 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 8pt;
+    letter-spacing: 1px;
 }
+.language a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .header {
     color: white;
     text-align: center;
     background-image: url("../images/hacking-health-camp-strasbourg.png");
     max-width: 1200px; 
+    padding-top: 15px;
 }
 .header h1 {
     font-size: 5em;
@@ -76,7 +92,12 @@ body {
     border-color: #c0323b;
     background-color: transparent;
     margin-top: 10px;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
+    font-size: 25pt;
+}
+.header button:hover {
+    color: red;
+    
 }
 
 .events {
@@ -175,7 +196,9 @@ body {
     padding: 30px 0;
 }
 .description span {
-    color: white; background-color: #c0323b; margin: 0; 
+    color: white; 
+    background-color: #c0323b; 
+    margin: 0; 
     padding: 3px 10px; 
     margin-left: 16.66666666666666666666%;
 }
@@ -205,18 +228,81 @@ body {
     text-align: center;  
 }
 
+#map_canvas {
+  height: 400px;
+}
+
+#legend > div {
+  /* top: 0; */
+  /* left: 250px; */
+  margin-top: 30px;
+  margin-left: 60px;
+}
+#legend span {
+  background: #c0323b;
+  color: white;
+  font-size: 10pt;
+  padding:5px 5px;
+}
+#legend h1 {
+    margin: 10px 0px;
+
+}
+#legend h2 {
+    margin: 0;
+
+}
+#legend > div > div {
+    margin-top: 20px;
+  
+}
+#legend > div > div > span {
+    display: inline;
+  
+    padding: 6px 9px;
+    border-radius: 50%;
+    font-size: 19pt;
+}
+#legend h3 {
+    display: inline;
+
+}
+
+.partners {
+    padding: 40px 0;
+
+}
+.partners span {
+  color: white;
+  background-color: #c0323b;
+  margin: 20px 0px 0 100px;
+  padding: 3px 10px;
+}
+.partners > div {
+  border-top: solid 1px #c0323b;
+  margin: 30px 100px 0px 100px;
+}
+.partners h1 {
+    font-size: 18pt;
+
+    line-height: 0;
+    color: #c0323b;
+}
+.partners > div > div {
+    text-align: center;
+  
+}
+.partners img {
+    display: inline;
+
+    width: 260px;
+    margin: 0 20px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
         max-width: 1200px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
     }
 
 }
