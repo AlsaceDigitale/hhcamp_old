@@ -68,6 +68,7 @@ body {
     background-image: url("../images/hacking-health-camp-strasbourg.png");
     max-width: 1200px; 
     padding-top: 15px;
+    padding-bottom: 25px;
 }
 .header h1 {
     font-size: 5em;
@@ -85,17 +86,16 @@ body {
 .header h4 {
     font-size: 35px;
     
+    margin-bottom: 25px;
 }
-.header button {
-    border-radius: 0;
+.header a {
     color: #c0323b;
     border-color: #c0323b;
     background-color: transparent;
-    margin-top: 10px;
-    margin-bottom: 35px;
     font-size: 25pt;
+    display: inline;
 }
-.header button:hover {
+.header a:hover {
     color: red;
     
 }
@@ -137,6 +137,9 @@ body {
 
 .schedule {
     background-image: url("../images/hacking-health-camp-world.png")
+;
+    background-position: center;
+    background-size: cover;
 }
 .schedule span {
     color: white;
@@ -156,11 +159,20 @@ body {
 }
 .schedule table {
     color: #c0323b;
-    
 }
 .schedule .table tbody td {
     border-top: 1px solid #c0323b;
-    
+}
+.schedule .table thead th {
+    border-bottom: 3px solid #c0323b;
+    font-size: 16pt;
+}
+.schedule h4 {
+  
+}
+.schedule h4 b {
+    font-size: 22pt;
+
 }
 
 .quote {
@@ -333,13 +345,33 @@ body {
     padding: 9px 0;
 
 }
-.contact button {
+.contact a {
   color: #c0323b;
   background-color: transparent;
   margin-top: 10px;
   border: solid 1px #c0323b;
   font-size: 14pt;
+  padding: 5px;
+  display: inline;
 }
+
+.footer {
+  background-color: #333333;
+  padding: 10px 0px;
+  /* margin: 0; */
+}
+.footer div {
+  display: inline-block;
+  color: white;
+}
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  text-decoration: none;
+  color: #c0323b;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
