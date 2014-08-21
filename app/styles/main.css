@@ -5,13 +5,17 @@
     padding: 0.2em 0;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+
 body {
-    font-family: Roboto Condensed;  
+    font-family: Roboto Slab, serif;
 }
 
 .menu {
     background-color: black;
     height: 20px;
+    font-family: Roboto Condensed,serif;
 }
 .menu a {
     color: white;
@@ -48,7 +52,7 @@ body {
 
 .language {
     display: inline-block;
-    
+
     float: right;
     background-color: #c0323b;
     color: white;
@@ -66,52 +70,53 @@ body {
     color: white;
     text-align: center;
     background-image: url("../images/hacking-health-camp-strasbourg.png");
-    max-width: 1200px; 
+    max-width: 1200px;
     padding-top: 15px;
     padding-bottom: 25px;
 }
 .header h1 {
+    font-family: "Roboto Condensed", serif;
     font-size: 5em;
     margin: 0;
 }
 .header h2 {
+    font-family: "Roboto Condensed", serif;
     margin-top: 10px;
     margin-bottom: 0;
     font-size: 17pt;
 }
 .header h3 {
     font-size: 55px;
-    
+
 }
 .header h4 {
     font-size: 35px;
-    
+
     margin-bottom: 25px;
 }
 .header a {
     color: #c0323b;
     border-color: #c0323b;
     background-color: transparent;
-    font-size: 25pt;
+    font-size: 12pt;
     display: inline;
 }
 .header a:hover {
     color: red;
-    
 }
 
 .events {
     margin-top: 60px;
-    
     margin-bottom: 60px;
     text-align: center;
 }
 .events .well {
-    
+    font-family: Roboto Condensed, serif;
+
 }
 .events img {
     padding-bottom: 12px;
-    
+
 }
 .events span {
     font-size: 13pt;
@@ -133,11 +138,12 @@ body {
 }
 .events p {
     text-align: left;
+    margin: 0 15px;
 }
 
 .schedule {
-    background-image: url("../images/hacking-health-camp-world.png")
-;
+  visibility: hidden;
+    background-image: url("../images/hacking-health-camp-world.png");
     background-position: center;
     background-size: cover;
 }
@@ -168,7 +174,7 @@ body {
     font-size: 16pt;
 }
 .schedule h4 {
-  
+
 }
 .schedule h4 b {
     font-size: 22pt;
@@ -189,8 +195,7 @@ body {
     vertical-align: top;
 }
 .quote blockquote {
-    font-size: 32pt;
-
+    font-size: 18pt;
     font-weight: bold;
     line-height: 38px;
     padding: 0 108px;
@@ -208,10 +213,10 @@ body {
     padding: 30px 0;
 }
 .description span {
-    color: white; 
-    background-color: #c0323b; 
-    margin: 0; 
-    padding: 3px 10px; 
+    color: white;
+    background-color: #c0323b;
+    margin: 0;
+    padding: 3px 10px;
     margin-left: 16.66666666666666666666%;
 }
 .description .event {
@@ -237,7 +242,7 @@ body {
 .description .img-circle {
     width: 100px;
     line-height: 100px;
-    text-align: center;  
+    text-align: center;
 }
 
 #map_canvas {
@@ -266,11 +271,11 @@ body {
 }
 #legend > div > div {
     margin-top: 20px;
-  
+
 }
 #legend > div > div > span {
     display: inline;
-  
+
     padding: 6px 9px;
     border-radius: 50%;
     font-size: 19pt;
@@ -292,21 +297,18 @@ body {
 }
 .partners > div {
   border-top: solid 1px #c0323b;
-  margin: 30px 100px 0px 100px;
+  margin: 30px 0px 0px 15px;
 }
 .partners h1 {
     font-size: 18pt;
 
-    line-height: 0;
     color: #c0323b;
 }
 .partners > div > div {
     text-align: center;
-  
 }
 .partners img {
     display: inline;
-
     width: 260px;
     margin: 0 20px;
 }
@@ -315,22 +317,21 @@ body {
   background-image: url('../images/hacking-health-crowd.jpg');
   background-position: center;
   background-size: cover;
-  height: 300px;
-  padding: 99px 0;
+  padding-top: 170px;
 }
 .contact span {
   color: white;
   background-color: #c0323b;
-  margin: 30px 0px 0px 100px;
-  padding: 3px 10px;
+  /* margin: 76px 0px 0px 100px; */
+  padding: 3px 8px;
+  /* position: absolute; */
 }
 .contact > div {
-    margin: 0px 100px;
-
+  margin: 0px 30px;
+  /* padding: 100px 0px 0px 10px; */
 }
 .contact .well {
     background-color: rgb(0,0,0);
-  
     color: white;
     border-radius: 0;
     border: 0;
@@ -338,12 +339,10 @@ body {
 }
 .contact h1 {
     font-size: 20pt;
-
     margin: 0;
 }
 .contact p {
     padding: 9px 0;
-
 }
 .contact a {
   color: #c0323b;
@@ -351,9 +350,13 @@ body {
   margin-top: 10px;
   border: solid 1px #c0323b;
   font-size: 14pt;
-  padding: 5px;
+  padding: 5px 15px;
   display: inline;
 }
+.contact a:hover {
+    color: red;
+}
+
 
 .footer {
   background-color: #333333;
@@ -377,5 +380,13 @@ body {
     .container {
         max-width: 1200px;
     }
-
+    .header a {
+      font-size: 24pt;
+    }
+    .schedule {
+      visibility: visible;
+    }
+    .quote blockquote {
+      font-size: 32pt;
+    }
 }
