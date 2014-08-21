@@ -1,1 +1,1 @@
-console.log("'Allo 'Allo!");
+function initialize(){var e=document.getElementById("map_canvas"),o={center:new google.maps.LatLng(48.5778309,7.7410011),zoom:14,mapTypeId:google.maps.MapTypeId.ROADMAP},n=new google.maps.Map(e,o);new google.maps.Marker({position:new google.maps.LatLng(48.5778309,7.7410011),icon:"images/location.png",map:n}),n.controls[google.maps.ControlPosition.TOP_LEFT].push(document.getElementById("legend"))}google.maps.event.addDomListener(window,"load",initialize);
