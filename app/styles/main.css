@@ -372,7 +372,6 @@ body {
 .footer {
   background-color: #333333;
   padding: 10px 0px;
-  /* margin: 0; */
 }
 .footer div {
   display: inline-block;
@@ -389,7 +388,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 1200px;
+      max-width: 1200px;
     }
     .header a {
       font-size: 24pt;
