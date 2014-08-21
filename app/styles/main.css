@@ -299,6 +299,47 @@ body {
     margin: 0 20px;
 }
 
+.contact {
+  background-image: url('../images/hacking-health-crowd.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  padding: 30px 0;
+}
+.contact span {
+  color: white;
+  background-color: #c0323b;
+  margin: 30px 0px 0px 100px;
+  padding: 3px 10px;
+}
+.contact > div {
+    margin: 0px 100px;
+
+}
+.contact .well {
+    background-color: rgb(0,0,0);
+  
+    color: white;
+    border-radius: 0;
+    border: 0;
+    opacity: 0.8;
+}
+.contact h1 {
+    font-size: 20pt;
+
+    margin: 0;
+}
+.contact p {
+    padding: 9px 0;
+
+}
+.contact button {
+  color: #c0323b;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid 1px #c0323b;
+  font-size: 14pt;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
