@@ -106,12 +106,23 @@ body {
 }
 
 .events {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     margin-bottom: 60px;
     text-align: center;
 }
 .events .well {
     font-family: Roboto Condensed, serif;
+
+}
+.events h1 {
+    font-size: 19pt;
+
+}
+.events h2 {
+    font-size: 15pt;
+
+}
+.events p {
 
 }
 .events img {
@@ -226,7 +237,7 @@ body {
     width: 100%;
 }
 .description h1 {
-    font-size: 19pt;
+    font-size: 16pt;
     font-weight: bold;
     padding-left: 10px;
 }
