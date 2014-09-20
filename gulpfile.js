@@ -104,7 +104,7 @@ gulp.task("open-dist", ['connect-dist'], function(){
 });
 
 gulp.task('serve', ['connect'], function () {
-    require('opn')('http://localhost:9000');
+    require('opn')('http://localhost:9000', {app: 'Chrome Canary'});
 });
 
 // inject bower components

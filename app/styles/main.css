@@ -27,15 +27,11 @@ body {
 
 .menu-left {
     font-size: 10pt;
-    padding: 0 10px;
-    display: inline-block;
-    background-color: #3b3b3a;
     color: white;
     letter-spacing: 1px;
 }
 
 .social {
-    display: inline-block;
 }
 .social li {
     text-align: center;
@@ -50,9 +46,11 @@ body {
     width: 20px;
 }
 
-.language {
-    display: inline-block;
+.team span {
+    color: white;
+}
 
+.language {
     float: right;
     background-color: #c0323b;
     color: white;
@@ -69,7 +67,7 @@ body {
 .header {
     color: white;
     text-align: center;
-    background-image: url("../images/hacking-health-camp-strasbourg.png");
+    background-image: url("../images/hacking-health-camp-ambiance.jpg");
     max-width: 1200px;
     padding-top: 15px;
     padding-bottom: 25px;
@@ -91,7 +89,6 @@ body {
 }
 .header h4 {
     font-size: 35px;
-
     margin-bottom: 25px;
 }
 .header a {
@@ -105,29 +102,57 @@ body {
     color: red;
 }
 
+.date div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.date h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 32px
+}
+.date h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 20px
+}
+.date h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 10px
+}
+.date h4 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 8px
+}
+
 .events {
     /* margin-top: 60px; */
     margin-bottom: 60px;
     text-align: center;
+    //background-image: url("../images/hacking-health-camp-ambiance.jpg");
+    //background-size: cover;
+    //color: #ffffff;
+}
+.events div div h1 {
+  font-size: 24px;
 }
 .events .well {
     font-family: Roboto Condensed, serif;
-
-}
-.events h1 {
-    font-size: 19pt;
-
-}
-.events h2 {
-    font-size: 15pt;
-
-}
-.events p {
-
+    margin-bottom: 10px;
 }
 .events img {
     padding-bottom: 12px;
-
 }
 .events span {
     font-size: 13pt;
@@ -148,8 +173,18 @@ body {
     background-color: #00bc61;
 }
 .events p {
-    text-align: left;
-    margin: 0 15px;
+    text-align: justify;
+    margin: 10px 0px;
+}
+.events .date {
+  display: inline;
+}
+.m34 {
+  margin-right: 34px;
+  margin-left: 34px;
+}
+.bonus div {
+  display: inline;
 }
 
 .schedule {
@@ -221,20 +256,52 @@ body {
 
 .description {
     background-color: #333333;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 .description span {
     color: white;
     background-color: #c0323b;
     margin: 0;
-    padding: 3px 10px;
-    margin-left: 16.66666666666666666666%;
+    padding: 3px 5px;
+    margin-left: 1%;
 }
 .description .event {
     background-color: white;
     padding: 10px 10px;
     display: inline-block;
     width: 100%;
+}
+.description .event1 {
+    background-image: url("../images/DSC04019-1024x682.jpg");
+    background-size: cover;
+}
+.description .event1 h1 {
+    background-color: #ffd36a;
+    padding-right: 10px;
+}
+.description .event2 {
+    background-image: url("../images/DSC04016-1024x682.jpg");
+    background-size: cover;
+}
+.description .event2 h1 {
+    background-color: #00c2d1;
+    padding-right: 10px;
+}
+.description .event3 {
+    background-image: url("../images/DSC03965-1024x682.jpg");
+    background-size: cover;
+}
+.description .event3 h1 {
+    background-color: #c0323b;
+    padding-right: 10px;
+}
+.description .event4 {
+    background-image: url("../images/DSC04068-1024x682.jpg");
+    background-size: cover;
+}
+.description .event4 h1 {
+    background-color: #00bc61;
+    padding-right: 10px;
 }
 .description h1 {
     font-size: 16pt;
@@ -246,6 +313,9 @@ body {
     color: white;
     font-size: 10pt;
     padding: 15px 15px;
+}
+.description p b {
+    color: #c0323b;
 }
 .description .event div {
     display: inline-block;
@@ -367,7 +437,6 @@ body {
 .contact a:hover {
     color: red;
 }
-
 
 .footer {
   background-color: #333333;
