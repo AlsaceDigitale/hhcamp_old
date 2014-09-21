@@ -88,11 +88,16 @@ gulp.task('connect', function () {
 });
 
 gulp.task('connect-dist', function() {
-  var connect = require('connect');
-  connect.server({
-    root: 'dist/',
-    port: '8123'
-  });
+    var connect = require('connect');
+    var app = connect()
+        .use(connect.static('dist'))
+        .use(connect.directory('dist'));
+
+    require('http').createServer(app)
+        .listen(8123)
+        .on('listening', function () {
+            console.log('Started connect web server on http://localhost:8123');
+        });
 });
 
 gulp.task("open-dist", ['connect-dist'], function(){
