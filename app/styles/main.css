@@ -42,7 +42,7 @@ body {
     background-color: #3b3b3a;
     display: inline-block;
 }
-.social li,a,span {
+.social li, .social a, .social span {
     width: 20px;
 }
 
@@ -67,10 +67,24 @@ body {
 .header {
     color: white;
     text-align: center;
-    background-image: url("../images/hacking-health-camp-ambiance.jpg");
     max-width: 1200px;
     padding-top: 15px;
     padding-bottom: 25px;
+}
+.hhc {
+    background-image: url("../images/hacking-health-camp-ambiance.jpg");
+}
+.hdd {
+    background-image: url("../images/health-data-day.jpg");
+}
+.foh {
+    background-image: url("../images/future-of-health.jpg");
+}
+.hpc {
+    background-image: url("../images/health-pitch-challenge.jpg");
+}
+.hh {
+    background-image: url("../images/health-hackathon.jpg");
 }
 .header h1 {
     font-family: "Roboto Condensed", serif;
@@ -91,15 +105,15 @@ body {
     font-size: 35px;
     margin-bottom: 25px;
 }
-.header a {
-    color: #c0323b;
+a.btn {
+    color: #ffffff;
     border-color: #c0323b;
-    background-color: transparent;
-    font-size: 12pt;
+    background-color: #c0323b;
+    font-size: 24pt;
     display: inline;
 }
 .header a:hover {
-    color: red;
+    color: #ffd36a;
 }
 
 .date div {
@@ -159,6 +173,13 @@ body {
     font-weight: bold;
     color: white;
     letter-spacing: 2px;
+}
+.events img:hover {
+    text-decoration: none;
+}
+.events span:hover {
+    text-decoration: none;
+    color: #696a61;
 }
 .yellow {
     background-color: #ffd36a;
@@ -224,7 +245,6 @@ body {
 }
 .schedule h4 b {
     font-size: 22pt;
-
 }
 
 .quote {
@@ -452,6 +472,80 @@ body {
 .footer a:hover {
   text-decoration: none;
   color: #c0323b;
+}
+
+.center {
+    text-align: center;
+}
+.justify {
+    text-align: justify;
+}
+
+.hdd span, .foh span, .hh span, .hpc span {
+    font-size: 25px;
+    font-family: Roboto Condensed;
+    font-weight: bold;
+}
+
+.speakers .well {
+    padding: 0px 10px;
+}
+
+.speaker-caption {
+    position: relative;
+    font-size: 24px;
+    font-family: Roboto Condensed;
+    color: white;
+    top: -10px;
+    left: -27px;
+    width: 128px;
+}
+
+.material .well p {
+    color: #000000;
+    font-size: 12pt;
+}
+.card-text {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+    width: 210px;
+}
+.card-img {
+    display: inline-block;
+}
+
+
+.agenda h1, .coach h1, .team h1, .challenge h1, .jury h1, .faq h1, .prizes h1 {
+    color: white;
+    font-family: Roboto Condensed;
+    margin-bottom: 15px;
+}
+
+.infos, .challenge, .material, .team {
+    color: #ffffff;
+    //margin-bottom: 30px;
+}
+.infos p, .challenge p, .material p, .coach p, .team p, .jury p, .faq p, .prizes li {
+    font-size: 20px;
+}
+
+.speakers .well p {
+    font-size: 22px;
+    font-weight: bold;
+}
+.speakers .well a {
+    font-size: 22px;
+}
+
+.technical .speaker-caption {
+    background-color: #132892;
+}
+.legal .speaker-caption {
+    background-color: #927d13;
+}
+.medical .speaker-caption {
+    background-color: #138892;
 }
 
 /* Responsive: Portrait tablets and up */

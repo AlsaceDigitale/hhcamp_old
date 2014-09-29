@@ -20,11 +20,12 @@ gulp.task('scripts', function () {
         .pipe($.size());
 });
 
-gulp.task('html', ['styles', 'scripts'], function () {
+gulp.task('html', ['styles', 'scripts', 'fileinclude'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 
-    return gulp.src('app/*.html')
+    return gulp.src(['.tmp/*.html', 'app/404.html'])
+        .pipe(require('gulp-debug')({verbose: true}))
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(jsFilter)
         .pipe($.uglify())
@@ -40,11 +41,11 @@ gulp.task('html', ['styles', 'scripts'], function () {
 
 gulp.task('images', function () {
     return gulp.src('app/images/**/*')
-        .pipe($.cache($.imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        })))
+        //.pipe($.cache($.imagemin({
+        //    optimizationLevel: 3,
+        //    progressive: true,
+        //    interlaced: true
+        //})))
         .pipe(gulp.dest('dist/images'))
         .pipe($.size());
 });
@@ -58,7 +59,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('extras', function () {
-    return gulp.src(['app/*.*', '!app/*.html','CNAME'], { dot: true })
+    return gulp.src(['app/*.*', '!app/*.html', 'CNAME'], { dot: true })
         .pipe(gulp.dest('dist'));
 });
 
@@ -72,12 +73,21 @@ gulp.task('default', ['clean'], function () {
     gulp.start('build');
 });
 
-gulp.task('connect', function () {
+gulp.task('fileinclude', function() {
+    gulp.src(['app/index.html','app/health-data-day.html','app/future-of-health.html','app/health-pitch-challenge.html','app/health-hackathon.html'])
+        .pipe(require('gulp-file-include')({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('./.tmp'));
+});
+
+gulp.task('connect', ['fileinclude'], function () {
     var connect = require('connect');
     var app = connect()
         .use(require('connect-livereload')({ port: 35729 }))
-        .use(connect.static('app'))
         .use(connect.static('.tmp'))
+        .use(connect.static('app'))
         .use(connect.directory('app'));
 
     require('http').createServer(app)
@@ -134,6 +144,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
         'app/scripts/**/*.js',
         'app/images/**/*'
     ]).on('change', function (file) {
+        gulp.run('fileinclude');
         server.changed(file.path);
     });
 
