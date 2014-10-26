@@ -350,6 +350,12 @@ a.btn {
   height: 400px;
 }
 
+.venue span, .organizers span {
+    background: #c0323b;
+    color: white;
+    padding: 3px 5px;
+}
+
 #legend > div {
   /* top: 0; */
   /* left: 250px; */
@@ -376,13 +382,33 @@ a.btn {
 }
 #legend > div > div > span {
     display: inline;
-
     padding: 6px 9px;
     border-radius: 50%;
     font-size: 19pt;
 }
 #legend h3 {
     display: inline;
+
+}
+
+#legend2 > div {
+  /* top: 0; */
+  /* left: 250px; */
+  margin-top: 30px;
+  margin-left: 60px;
+}
+#legend2 span {
+  background: #c0323b;
+  color: white;
+  font-size: 10pt;
+  padding:5px 5px;
+}
+#legend2 h1 {
+    margin: 10px 0px;
+
+}
+#legend2 h2 {
+    margin: 0;
 
 }
 
@@ -412,6 +438,10 @@ a.btn {
     display: inline;
     width: 260px;
     margin: 0 20px;
+}
+
+.width-50 {
+    width: 80px;
 }
 
 .contact {

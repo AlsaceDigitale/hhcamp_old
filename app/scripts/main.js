@@ -11,6 +11,14 @@ function initialize() {
     icon: 'images/location.png',
     map: map
   });
+  new google.maps.Marker({
+    position: new google.maps.LatLng(48.5738893,7.7537716),
+    icon: 'images/location.png',
+    map: map
+  });
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(document.getElementById('legend'));
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(document.getElementById('legend2'));
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+$('.schedule span').tooltip({placement: 'right'});
